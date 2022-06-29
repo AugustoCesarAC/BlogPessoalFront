@@ -2,6 +2,10 @@
   background-color: #f27405 !important;
 
 }
+.fs-16{
+  font-size: 16pt;
+}
+
 a{
-  color: aliceblue !important;
+  cursor: pointer;
 }
