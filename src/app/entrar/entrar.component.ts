@@ -16,6 +16,10 @@ export class EntrarComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
+
+    if (environment.token != '') {
+      environment.token = '';
+    }
   }
 
   entrar() {
@@ -27,11 +31,6 @@ export class EntrarComponent implements OnInit {
         environment.nome = this.usuarioLogin.nome;
         environment.foto = this.usuarioLogin.foto;
         environment.id = this.usuarioLogin.id;
-
-        console.log(environment.token);
-        console.log(environment.nome);
-        console.log(environment.foto);
-        console.log(environment.id);
 
         this.router.navigate(['/inicio']);
       },
