@@ -3,6 +3,13 @@ html {
   scroll-behavior: smooth;
 }
 
+#imgBackground{
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh;
+}
+
 .fs-54 {
   font-size: 54pt;
 }

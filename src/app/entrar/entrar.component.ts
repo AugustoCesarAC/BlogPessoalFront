@@ -10,6 +10,7 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./entrar.component.css'],
 })
 export class EntrarComponent implements OnInit {
+  
   usuarioLogin: UsuarioLogin = new UsuarioLogin();
 
   constructor(private auth: AuthService, private router: Router) {}
@@ -20,7 +21,9 @@ export class EntrarComponent implements OnInit {
     if (environment.token != '') {
       environment.token = '';
     }
+
   }
+
 
   entrar() {
     this.auth.entrar(this.usuarioLogin).subscribe(
@@ -31,6 +34,8 @@ export class EntrarComponent implements OnInit {
         environment.nome = this.usuarioLogin.nome;
         environment.foto = this.usuarioLogin.foto;
         environment.id = this.usuarioLogin.id;
+
+        console.log(environment.token)
 
         this.router.navigate(['/inicio']);
       },
