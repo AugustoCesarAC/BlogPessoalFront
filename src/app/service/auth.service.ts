@@ -25,6 +25,17 @@ export class AuthService {
     );
   }
 
+  getByIdUsuario(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`https://bpspringa.herokuapp.com/usuarios/${id}`)
+  }
+
+  atualizar(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>(
+      'https://bpspringa.herokuapp.com/usuarios/atualizar',
+      usuario
+    );
+  }
+
   logado() {
     let ok: boolean = false;
 
